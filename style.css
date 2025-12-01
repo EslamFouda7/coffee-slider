@@ -49,12 +49,10 @@
 }
 
 .circle {
-
     height: clamp(15.625rem, 10.1232rem + 23.4742vw, 31.25rem);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    border: 5px solid;
-
+    border: 2px solid;
 }
 
 
