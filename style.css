@@ -1,0 +1,158 @@
+.section1 {
+    display: flex;
+    gap: 10px;
+}
+
+.shape {
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    ;
+}
+
+.shape1,
+.shape2,
+.shape3 {
+    margin: unset;
+    padding: 100px;
+    background-color: rgb(209, 209, 209);
+}
+
+.shape1 {
+    border: 10px solid red;
+}
+
+.shape2 {
+    border-right: 10px solid green;
+    border-left: 10px solid green;
+    border-top: 10px solid blue;
+    border-bottom: 10px solid blue;
+}
+
+.shape3 {
+
+    border-top: 10px solid red;
+    border-right: 10px solid green;
+    border-bottom: 10px solid blue;
+    border-left: 10px solid yellow;
+    border-style: dashed;
+}
+
+
+
+/* section2
+ */
+.section2 img {
+    height: clamp(15.625rem, 12.3239rem + 14.0845vw, 25rem);
+    object-fit: contain;
+}
+
+.circle {
+
+    height: clamp(15.625rem, 10.1232rem + 23.4742vw, 31.25rem);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 5px solid;
+
+}
+
+
+.section2 img {
+    width: clamp(9.375rem, 6.0739rem + 14.0845vw, 18.75rem);
+    height: clamp(9.375rem, 6.0739rem + 14.0845vw, 18.75rem);
+    object-fit: contain;
+    z-index: 3;
+}
+
+.img1,
+.img2,
+.img3 {
+    display: flex;
+    justify-content: center;
+}
+
+.img-left {
+    position: absolute;
+    transform: translate3d(-150%, -50%, 0);
+    transition: all 0.5s ease-in-out;
+}
+
+.img-center {
+    position: absolute;
+    transform: translate3d(0%, -50%, 0);
+    transition: all 0.5s ease-in-out;
+}
+
+.img-right {
+    position: absolute;
+
+    transform: translate3d(150%, -50%, 0);
+    transition: all 0.5s ease-in-out;
+}
+
+.circle span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+
+
+    --R_Value: calc(clamp(15.625rem, 10.1232rem + 23.4742vw, 31.25rem) / 2);
+
+    offset-path: circle(var(--R_Value) at 50% 50%);
+
+
+
+}
+
+
+.circle span:nth-child(1) {
+    offset-distance: 0%;
+    offset-rotate: 83deg;
+}
+
+.circle span:nth-child(2) {
+    offset-distance: 25%;
+    offset-rotate: 172deg;
+}
+
+.circle span:nth-child(3) {
+    offset-distance: 50%;
+    offset-rotate: -100deg;
+}
+
+.circle span:nth-child(4) {
+    offset-distance: 75%;
+    offset-rotate: -7deg;
+}
+
+@keyframes rotate-right {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-left {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.rotate-right {
+    animation: rotate-right 1s linear;
+}
+
+.rotate-left {
+    animation: rotate-left 1s linear;
+}
