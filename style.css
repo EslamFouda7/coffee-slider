@@ -48,7 +48,7 @@
     object-fit: contain;
 }
 
-.circle {
+.section2 .circle {
     height: clamp(15.625rem, 10.1232rem + 23.4742vw, 31.25rem);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
@@ -63,33 +63,33 @@
     z-index: 3;
 }
 
-.img1,
-.img2,
-.img3 {
+.section2 .img1,
+.section2 .img2,
+.section2 .img3 {
     display: flex;
     justify-content: center;
 }
 
-.img-left {
+.section2 .img-left {
     position: absolute;
     transform: translate3d(-150%, -50%, 0);
     transition: all 0.5s ease-in-out;
 }
 
-.img-center {
+.section2 .img-center {
     position: absolute;
     transform: translate3d(0%, -50%, 0);
     transition: all 0.5s ease-in-out;
 }
 
-.img-right {
+.section2 .img-right {
     position: absolute;
 
     transform: translate3d(150%, -50%, 0);
     transition: all 0.5s ease-in-out;
 }
 
-.circle span {
+.section2 .circle span {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -107,22 +107,22 @@
 }
 
 
-.circle span:nth-child(1) {
+.section2 .circle span:nth-child(1) {
     offset-distance: 0%;
     offset-rotate: 83deg;
 }
 
-.circle span:nth-child(2) {
+.section2 .circle span:nth-child(2) {
     offset-distance: 25%;
     offset-rotate: 172deg;
 }
 
-.circle span:nth-child(3) {
+.section2 .circle span:nth-child(3) {
     offset-distance: 50%;
     offset-rotate: -100deg;
 }
 
-.circle span:nth-child(4) {
+.section2 .circle span:nth-child(4) {
     offset-distance: 75%;
     offset-rotate: -7deg;
 }
@@ -153,4 +153,80 @@
 
 .rotate-left {
     animation: rotate-left 1s linear;
+}
+
+
+
+/* section3
+ */
+ .section3{
+    transition: all 1s ease-in-out;
+ }
+.section3 .circle {
+    height: clamp(12.5rem, -0.7042rem + 56.3380vw, 50rem);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    top: 100%;
+    right: 50%;
+    transform: translate(50%, 15%);
+    animation: routat 20s linear infinite;
+    transition: all 1.5s ease-in-out;
+}
+
+.section3 .circle div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -100%);
+    --R_Value: calc(clamp(12.5rem, -0.7042rem + 56.3380vw, 50rem) / 2);
+    offset-path: circle(var(--R_Value) at 50% 50%);
+    width: clamp(6.25rem, 4.0493rem + 9.3897vw, 12.5rem);
+
+}
+
+.section3 .fruts img {
+    width: clamp(12.5rem, 5.8979rem + 28.1690vw, 31.25rem);
+    transition: all 1.5s ease-in-out;
+}
+
+.section3 .circle div img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.section3 .circle div:nth-child(1) {
+    offset-distance: 75%;
+    offset-rotate: 0deg;
+}
+
+.section3 .circle div:nth-child(2) {
+    offset-distance: 50%;
+    offset-rotate: -90deg;
+}
+
+.section3 .circle div:nth-child(3) {
+
+    offset-distance: 25%;
+    offset-rotate: 180deg;
+}
+
+.section3 .circle div:nth-child(4) {
+    offset-distance: 0%;
+    offset-rotate: 90deg;
+}
+
+@media(max-width: 767px) {
+    .section3 .circle {
+        transform: translate(50%, -15%);
+
+    }
+}
+
+.fruts-img{
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.fruts-img.active{
+    opacity: 1;
 }
