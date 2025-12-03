@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 
 <head>
     <meta charset="UTF-8">
@@ -9,9 +9,11 @@
     <style type="text/tailwindcss">
     </style>
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
-<body>
+<body dir="rtl">
     <section class="section1 mb-20 overflow-hidden">
         <div class="shape ">
             <h2 class="shape1">Shape 1</h2>
@@ -50,17 +52,26 @@
 
     <section class="section3 h-[100vh]  flex justify-center items-center relative overflow-hidden">
         <h1 class="text-white font-bold" style="font-size: clamp(6rem, -1.0423rem + 30.0469vw, 26rem);">PURE</h1>
-        <div class="circle rounded-full absolute  z-10">
-           
-        </div>
-        <div class="fruts absolute z-5">
-            
-        </div>
-        <div class="buttons absolute bottom-10 flex gap-5">
 
-            <button id="prev">prev</button>
-            <button id="next">next</button>
+
+
+        <div class="circle rounded-full absolute  z-10 top-[80%] md:top-[90%] lg:top-[100%] ">
         </div>
+
+        <div class="fruts absolute z-5">
+        </div>
+
+        <div class="buttons text-white text-3xl absolute bottom-[10%] left-[10%] flex gap-5 z-20">
+            <button id="next"><i class="fa-solid fa-circle-right"></i></button>
+            <button id="prev"><i class="fa-solid fa-circle-left"></i></button>
+        </div>
+
+
+        <div class="info absolute bottom-[20%] right-[10%] z-15">
+           <div class="content relative">
+           </div>
+        </div>
+
     </section>
     <script src="/main.js"></script>
 </body>

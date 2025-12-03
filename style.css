@@ -162,17 +162,20 @@
  .section3{
     transition: all 1s ease-in-out;
  }
+
+ /* دايره المشروبات*/
 .section3 .circle {
     height: clamp(12.5rem, -0.7042rem + 56.3380vw, 50rem);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
-    top: 100%;
+   
     right: 50%;
     transform: translate(50%, 15%);
     animation: routat 20s linear infinite;
     transition: all 1.5s ease-in-out;
 }
 
+/*توزيع الصور علي الدايره */
 .section3 .circle div {
     position: absolute;
     top: 50%;
@@ -180,10 +183,11 @@
     transform: translate(0%, -100%);
     --R_Value: calc(clamp(12.5rem, -0.7042rem + 56.3380vw, 50rem) / 2);
     offset-path: circle(var(--R_Value) at 50% 50%);
-    width: clamp(6.25rem, 4.0493rem + 9.3897vw, 12.5rem);
+    width: clamp(5.625rem, 3.2042rem + 10.3286vw, 12.5rem);
 
 }
 
+/*صور الفاكهه*/
 .section3 .fruts img {
     width: clamp(12.5rem, 5.8979rem + 28.1690vw, 31.25rem);
     transition: all 1.5s ease-in-out;
@@ -195,6 +199,10 @@
     object-fit: contain;
 }
 
+
+
+
+/* موقع الصور علي الدايره*/
 .section3 .circle div:nth-child(1) {
     offset-distance: 75%;
     offset-rotate: 0deg;
@@ -216,12 +224,7 @@
     offset-rotate: 90deg;
 }
 
-@media(max-width: 767px) {
-    .section3 .circle {
-        transform: translate(50%, -15%);
 
-    }
-}
 
 .fruts-img{
     opacity: 0;
@@ -229,4 +232,23 @@
 }
 .fruts-img.active{
     opacity: 1;
+}
+
+.info-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+.info-div.active {
+    opacity: 1;
+}
+.info-div h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+}
+.info-div p{
+    color: rgb(255, 255, 255);
 }
